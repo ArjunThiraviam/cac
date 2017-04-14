@@ -1,0 +1,1128 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="mash_copy/css/style.css">
+<link rel="stylesheet" type="text/css" href="mash_copy/css/microsites.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<style type="text/css">
+	.mainmenu {
+		top: 37px;
+		-webkit-transform: translate3d(0, 0, 0) !important; 
+     transform: translate3d(0, 0, 0) !important ;
+    
+	}
+</style>
+</head>
+
+<body>
+<nav class="topNav">
+<!--top nav-->
+<div class="row">
+<!--left top nav-->
+        <div class="col-md-9 col-xs-12 no-padding">
+            <div class="leftLinks" ng-class="{showLeftlinks : viewport == 'visible-xs' || viewport == 'visible-sm'}">
+                <ul>
+                            <li ng-class="personalCSS" style="width: 100px; text-align: center; position: fixed; ng-hide="personalCSS=='selected'" class="ng-hide selected"><a href="/uae/en/personal/home" target="_self">Personal</a></li>
+                            <li ng-class="personalCSS" style="width: 100px; text-align: center;" ng-hide="personalCSS=='selected'" class="ng-hide selected"><a href="/uae/en/personal/home" target="_self">Personal</a></li>
+                            <li ng-class="corporatelCSS" ng-hide="corporatelCSS=='selected'" class=""><a href="#" target="_self">Corporate</a></li>
+                            <li ng-class="businessCSS" ng-hide="businessCSS=='selected'" class=""><a href="#" target="_self">Business</a></li>
+                            <li><a href="#" target="_blank">Agricultural Service</a></li>
+                            <li><a href="#" target="_blank">Money Transfer</a></li> 
+                </ul>
+            </div>
+        </div>
+<!--end left top nav-->
+<!--start right top nav-->
+        <div class="col-md-3 col-xs-12 no-padding">
+            <div class="rightLinks" ng-class="{showLeftlinks : viewport == 'visible-xs' || viewport == 'visible-sm'}">
+                <ul class="rightLinks">
+                                <li class="contact-btn"><span class="glyphicon-cu glyphicon glyphicon-edit"></span>
+                        <p>Apply</p>
+                    </a></li>
+                                <li ng-class="businessCSS" class="contact-btn"><span class="glyphicon-cu glyphicon glyphicon-search"></span>
+                        <p>Search</p>
+                    </a></li>
+                                <li ng-class="businessCSS" class="contact-btn"><span class="glyphicon-cu glyphicon glyphicon-earphone"></span>
+                        <p>Contact</p>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+<!--end right top nav-->
+    </div>
+<!--end top nav-->
+</nav>
+
+
+<!--start left menu-->
+<div id="menu" class="mainmenu">
+<div class="scrollContent">
+        <!-- for web -->
+        <ul class="hidden-xs hidden-sm" ng-mouseenter="touchMenu(viewport)" ng-mouseleave="touchMenu(viewport)">
+
+            <li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/safebox (2).png" style="height: 35px;width: 35px;">
+                   <!-- <img src="mash_copy/img/safebox (1).png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/safebox.png" style="height: 35px;width: 35px;">-->
+                    <div class="itemText ng-binding">Accounts &amp; Deposits</div>
+                </a>
+            </li><!-- end ngRepeat: (key, item) in mainmenu -->
+            <li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/change (2).png" style="height: 35px;width: 35px;">
+                    <!--<img src="mash_copy/img/change.png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/change (1).png" style="height: 35px;width: 35px;">-->
+                    <div class="itemText ng-binding">Loans</div>
+                </a>
+            </li><!-- end ngRepeat: (key, item) in mainmenu -->
+
+            <li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/credit-card (2).png" style="height: 35px;width: 35px;">
+                    <!--<img src="mash_copy/img/credit-card.png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/credit-card (1).png" style="height: 35px;width: 35px;">-->
+                    <div class="itemText ng-binding">Cards</div>
+                </a>
+                <!-- ngIf: item.subname.element.length != undefined --><div class="subLevel ng-scope" style="background-image: url('');" ng-if="item.subname.element.length != undefined">
+                    <!-- ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Cards</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Credit Cards</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-tap-n-go" href="/uae/en/personal/cards/credit-cards/mashreq-tap-n-go">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mashreq TAP n GO
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/fifa-mashreq-visa-credit-card" href="/uae/en/personal/cards/credit-cards/fifa-mashreq-visa-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        FIFA Mashreq Visa Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-platinum-elite-credit-card" href="/uae/en/personal/cards/credit-cards/mashreq-platinum-elite-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mashreq Platinum Elite Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="https://www.mashreqsmilescard.com/" href="https://www.mashreqsmilescard.com/">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mashreq sMiles Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-smart-saver-credit-card" href="/uae/en/personal/cards/credit-cards/mashreq-smart-saver-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        SmartSaver Credit Cards
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-solitaire-credit-card" href="/uae/en/personal/cards/credit-cards/mashreq-solitaire-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Solitaire Credit Cards
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/etisalat-credit-card" href="/uae/en/personal/cards/credit-cards/etisalat-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Etisalat Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-novo-credit-card" href="/uae/en/personal/cards/credit-cards/mashreq-novo-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mashreq Novo Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-portraits-card" href="/uae/en/personal/cards/credit-cards/mashreq-portraits-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mashreq Portraits Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/cinema" href="/uae/en/personal/cards/credit-cards/cinema">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Novo Cinema Package
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-business-credit-card" href="/uae/en/personal/cards/credit-cards/mashreq-business-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mashreq Business Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/corporate-credit-card" href="/uae/en/personal/cards/credit-cards/corporate-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Corporate Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/gold-card" href="/uae/en/personal/cards/credit-cards/gold-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Gold Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/smartsaver-global-credit-card" href="/uae/en/personal/cards/credit-cards/smartsaver-global-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        SmartSaver Global Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/credit-cards/mashreq-air-arabia-credit-card" href="/uae/en/personal/cards/credit-cards/mashreq-air-arabia-credit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mashreq Air Arabia Credit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Debit Cards</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/debit-cards/platinum-debit-card" href="/uae/en/personal/cards/debit-cards/platinum-debit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Platinum Debit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/debit-cards/supplementary-debit-card" href="/uae/en/personal/cards/debit-cards/supplementary-debit-card">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Supplementary Debit Card
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Offers &amp; Benefits</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Cards Services</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/merchant-services" href="/uae/en/personal/cards/cards-services/merchant-services">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Merchant Services
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/wallet-protect" href="/uae/en/personal/cards/cards-services/wallet-protect">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Wallet Protect
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/convenience-cash" href="/uae/en/personal/cards/cards-services/convenience-cash">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Convenience Cash
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/revolving-balance-transfer" href="/uae/en/personal/cards/cards-services/revolving-balance-transfer">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Revolving Balance Transfer
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/smart-protect" href="/uae/en/personal/cards/cards-services/smart-protect">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Smart Protect
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/balance-transfer" href="/uae/en/personal/cards/cards-services/balance-transfer">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Balance Transfer
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/credit-card-dispute-form" href="/uae/en/personal/cards/cards-services/credit-card-dispute-form">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Credit Card Dispute Form
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/credit-shield" href="/uae/en/personal/cards/cards-services/credit-shield">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Credit Shield
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/easy-cash" href="/uae/en/personal/cards/cards-services/easy-cash">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Easy Cash
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/pay-protect" href="/uae/en/personal/cards/cards-services/pay-protect">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Pay Protect
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/cards/cards-services/visa-checkout" href="/uae/en/personal/cards/cards-services/visa-checkout">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Visa Checkout
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element -->
+                </div><!-- end ngIf: item.subname.element.length != undefined -->
+                <!-- ngIf: item.subname.element.length == undefined -->
+            </li><!-- end ngRepeat: (key, item) in mainmenu --><li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/suitcase (2).png" style="height: 35px;width: 35px;">
+                    <!--<img src="mash_copy/img/suitcase.png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/suitcase (1).png" style="height: 35px;width: 35px;">-->
+
+                    <div class="itemText ng-binding">Insurance</div>
+                </a>
+                <!-- ngIf: item.subname.element.length != undefined --><div class="subLevel ng-scope" style="background-image: url('');" ng-if="item.subname.element.length != undefined">
+                    <!-- ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Insurance</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Life Insurance</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/life-insurance/whole-life-insurance" href="/uae/en/personal/insurance/life-insurance/whole-life-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Whole of Life Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/life-insurance/term-life-insurance" href="/uae/en/personal/insurance/life-insurance/term-life-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Term Life Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Saving Plans</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/saving-plans/long-term-savings" href="/uae/en/personal/insurance/saving-plans/long-term-savings">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Long Term Savings
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/saving-plans/medium-term-savings" href="/uae/en/personal/insurance/saving-plans/medium-term-savings">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Medium Term Savings
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/saving-plans/lic-international" href="/uae/en/personal/insurance/saving-plans/lic-international">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        LIC International
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">General Insurance</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/home-and-personal-belongings-insurance" href="/uae/en/personal/insurance/general-insurance/home-and-personal-belongings-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Home contents Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/car-insurance" href="/uae/en/personal/insurance/general-insurance/car-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Car Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/medical-insurance" href="/uae/en/personal/insurance/general-insurance/medical-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Medical Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/personal-accident-insurance" href="/uae/en/personal/insurance/general-insurance/personal-accident-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Personal Accident Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/travel-insurance" href="/uae/en/personal/insurance/general-insurance/travel-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Travel Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/critical-illness-insurance" href="/uae/en/personal/insurance/general-insurance/critical-illness-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Critical Illness
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/hospital-cash-plan-insurance" href="/uae/en/personal/insurance/general-insurance/hospital-cash-plan-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Hospital Cash Plan Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/income-shield-insurance" href="/uae/en/personal/insurance/general-insurance/income-shield-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Income Shield Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/secure-plus-insurance" href="/uae/en/personal/insurance/general-insurance/secure-plus-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Secure Plus Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/insurance/general-insurance/smart-life-plan-insurance" href="/uae/en/personal/insurance/general-insurance/smart-life-plan-insurance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Smart Life Plan Insurance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element -->
+                </div><!-- end ngIf: item.subname.element.length != undefined -->
+                <!-- ngIf: item.subname.element.length == undefined -->
+            </li><!-- end ngRepeat: (key, item) in mainmenu --><li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/line-chart.png" style="height: 35px;width: 35px;">
+                    <!--<img src="mash_copy/img/megaphone (1).png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/megaphone.png" style="height: 35px;width: 35px;">-->
+                    <div class="itemText ng-binding">Overdrafts</div>
+                </a>
+                <!-- ngIf: item.subname.element.length != undefined -->
+                <!-- ngIf: item.subname.element.length == undefined --><div class="subLevel ng-scope" style="background-image: url('');" ng-if="item.subname.element.length == undefined">
+                    <div class="scrollContent">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Overdrafts</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: item.subname.element.submenu.element.length != undefined --><ul ng-if="item.subname.element.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/overdrafts/revolving-overdraft" href="/uae/en/personal/overdrafts/revolving-overdraft">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Revolving Overdraft
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/overdrafts/secured-overdrafts" href="/uae/en/personal/overdrafts/secured-overdrafts">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Secured Overdraft
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element -->
+                        </ul><!-- end ngIf: item.subname.element.submenu.element.length != undefined -->
+                        <!-- ngIf: item.subname.element.submenu.element.length == undefined && item.subname.element.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div>
+                </div><!-- end ngIf: item.subname.element.length == undefined -->
+            </li><!-- end ngRepeat: (key, item) in mainmenu --><li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/computer.png" style="height: 35px;width: 35px;">
+                    <!--<img src="mash_copy/img/megaphone (1).png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/megaphone.png" style="height: 35px;width: 35px;">-->
+                    <div class="itemText ng-binding">Digital Banking</div>
+                </a>
+                <!-- ngIf: item.subname.element.length != undefined -->
+                <!-- ngIf: item.subname.element.length == undefined --><div class="subLevel ng-scope" style="background-image: url('');" ng-if="item.subname.element.length == undefined">
+                    <div class="scrollContent">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Digital Banking</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: item.subname.element.submenu.element.length != undefined --><ul ng-if="item.subname.element.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/mashreq-online" href="/uae/en/personal/digital-banking/mashreq-online">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        MashreqOnline
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/atm" href="/uae/en/personal/digital-banking/atm">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Automatic Teller Machines
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/mobile-banking-snapp" href="/uae/en/personal/digital-banking/mobile-banking-snapp">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mobile Banking Snapp
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/e-account" href="/uae/en/personal/digital-banking/e-account">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        E-Account
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/instant-bill-payments" href="/uae/en/personal/digital-banking/instant-bill-payments">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Instant Bill Payments
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/mobile-alerts" href="/uae/en/personal/digital-banking/mobile-alerts">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Mobile alerts
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="https://apply.mashreqbank.com/_layouts/ApplicationPages/IAOF.aspx" href="https://apply.mashreqbank.com/_layouts/ApplicationPages/IAOF.aspx">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        E-Forms
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/samsung-pay" href="/uae/en/personal/digital-banking/samsung-pay">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Samsung Pay
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/digital-banking/ahsen" href="/uae/en/personal/digital-banking/ahsen">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Ahasen
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element -->
+                        </ul><!-- end ngIf: item.subname.element.submenu.element.length != undefined -->
+                        <!-- ngIf: item.subname.element.submenu.element.length == undefined && item.subname.element.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div>
+                </div><!-- end ngIf: item.subname.element.length == undefined -->
+            </li><!-- end ngRepeat: (key, item) in mainmenu --><li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/megaphone (2).png" style="height: 35px;width: 35px;">
+                    <!--<img src="mash_copy/img/megaphone (1).png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/megaphone.png" style="height: 35px;width: 35px;">-->
+                    <div class="itemText ng-binding">Offers</div>
+                </a>
+                <!-- ngIf: item.subname.element.length != undefined -->
+                <!-- ngIf: item.subname.element.length == undefined --><div class="subLevel ng-scope" style="background-image: url('');" ng-if="item.subname.element.length == undefined">
+                    <div class="scrollContent">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Offers</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: item.subname.element.submenu.element.length != undefined --><ul ng-if="item.subname.element.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/offers/privileges" href="/uae/en/personal/offers/privileges">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Privileges
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/offers/flavours" href="/uae/en/personal/offers/flavours">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Flavours
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/offers/tapngo" href="/uae/en/personal/offers/tapngo">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Tap n Go
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/offers/smart" href="/uae/en/personal/offers/smart">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Smart Saver
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="http://www.visamiddleeast.com/ae/en-ae/personal/promotions/local.shtml" href="http://www.visamiddleeast.com/ae/en-ae/personal/promotions/local.shtml">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Visa
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="https://www.priceless.com/en-ae.html" href="https://www.priceless.com/en-ae.html">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        MasterCard
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element --><li ng-repeat="(key, subItem) in item.subname.element.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/personal/offers/epp" href="/uae/en/personal/offers/epp">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Easy Payment Plan
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in item.subname.element.submenu.element -->
+                        </ul><!-- end ngIf: item.subname.element.submenu.element.length != undefined -->
+                        <!-- ngIf: item.subname.element.submenu.element.length == undefined && item.subname.element.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div>
+                </div><!-- end ngIf: item.subname.element.length == undefined -->
+            </li><!-- end ngRepeat: (key, item) in mainmenu --><li ng-repeat="(key, item) in mainmenu" ng-mouseenter="showsubMenu($event,viewport)" ng-mouseleave="showsubMenu($event,viewport)" class="ng-scope">
+                <a href="#" ng-click="hideMenu(viewport)">
+                    <!--<a get-new-items="{{item.submenu}}">-->
+                    <img src="mash_copy/img/bank.png" style="height: 35px;width: 35px;">
+                    <!--<img src="mash_copy/img/megaphone (1).png" style="height: 35px;width: 35px;">-->
+                    <!--<img src="mash_copy/img/megaphone.png" style="height: 35px;width: 35px;">-->
+                    <div class="itemText ng-binding">About Us</div>
+                </a>
+                <!-- ngIf: item.subname.element.length != undefined --><div class="subLevel ng-scope" style="background-image: url('');" ng-if="item.subname.element.length != undefined">
+                    <!-- ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">About Us</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/about-us/important-notices" href="/uae/en/about-us/important-notices">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Important Notices
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/about-us/vision" href="/uae/en/about-us/vision">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Vision
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/about-us/company-information" href="/uae/en/about-us/company-information">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Company Information
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/about-us/company-information/corporate-governance" href="/uae/en/about-us/company-information/corporate-governance">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Corporate Governance
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/about-us/history" href="/uae/en/about-us/history">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        History
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/about-us/affiliates" href="/uae/en/about-us/affiliates">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Affiliates
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/about-us/awards-accolades" href="/uae/en/about-us/awards-accolades">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Awards &amp; Accolades
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Careers</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Investor Relations</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/investor-relations/financial-information" href="/uae/en/investor-relations/financial-information">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Financial Information
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/investor-relations/presentations" href="/uae/en/investor-relations/presentations">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Presentations
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/investor-relations/shareholder-toolkit" href="/uae/en/investor-relations/shareholder-toolkit">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Shareholder Toolkit
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/investor-relations/events-calendar" href="/uae/en/investor-relations/events-calendar">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Events Calendar
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/investor-relations/contact-us" href="/uae/en/investor-relations/contact-us">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Contact Us
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">CSR</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined --><ul ng-if="menuItem.submenu.element.length != undefined" class="ng-scope">
+                            <!-- ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/csr/activities" href="/uae/en/csr/activities">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Activities
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/csr/csr-model" href="/uae/en/csr/csr-model">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        CSR Model
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/csr/association-with-dubai-chamber" href="/uae/en/csr/association-with-dubai-chamber">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Association with Dubai Chamber
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/csr/milestones-in-the-csr-journey" href="/uae/en/csr/milestones-in-the-csr-journey">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Milestones in the CSR journey
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element --><li ng-repeat="(key, subItem) in menuItem.submenu.element" class="ng-scope">
+                                <a ng-href="/uae/en/csr/our-partners" href="/uae/en/csr/our-partners">
+                                    <div class="txt ng-binding" add-new-badge="false">
+                                        Our Partners
+                                        <div class="glyphicon glyphicon-chevron-right"></div>
+                                    </div>
+                                </a>
+                            </li><!-- end ngRepeat: (key, subItem) in menuItem.submenu.element -->
+                        </ul><!-- end ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">News</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">Property Mart</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element --><div class="scrollContent ng-scope" ng-repeat="(key, menuItem) in item.subname.element">
+                        <!--<div class="glyphicon {{item.icon}}"></div>-->
+                        <h2 class="ng-binding">mashreq SMEXchange</h2>
+                        <!--   <p>{{item.description}}</p>-->
+                        <a href="#" class="learn-more">learn more<div class="glyphicon glyphicon-chevron-right"></div>
+                        </a>
+                        <!-- ngIf: menuItem.submenu.element.length != undefined -->
+                        <!-- ngIf: menuItem.submenu.element.length == undefined && menuItem.submenu.element.name != undefined -->
+                        <div style="clear: both; margin-top: 20px;"></div>
+                    </div><!-- end ngRepeat: (key, menuItem) in item.subname.element -->
+                </div><!-- end ngIf: item.subname.element.length != undefined -->
+                <!-- ngIf: item.subname.element.length == undefined -->
+            </li><!-- end ngRepeat: (key, item) in mainmenu -->
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<header class="header header-per ng-scope">
+<div class="row">
+        <div class="col-md-6 col-sm-4 hidden-xs hidden-sm">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 hidden-sm">
+                    <a href="#"> <img src="mash_copy/img/logo.png" class="logo-img-responsive"></a>
+                </div>
+                <div class="col-sm-4 col-xs-4 visible-sm">
+                    <a href="/uae/en/personal/home"> <img src="/uae/en/images/mashreq_logo_mob_tcm77-217771.png" class="logo-img-responsive-sq"></a>
+                </div>
+                <div class="col-md-6 col-sm-8 col-xs-12">
+                    <div class="dateWeather">
+                        <div class="date  hidden-xs hidden-sm">
+                            <span class="dateMsg" time-msg="">Good Afternoon</span>
+                            <!--<span class="dateTime">{{todayTime | amDateFormat:'dddd, MMMM Do YYYY'}}</span>-->
+                        </div>
+                        <div class="multi-head hidden-sm">
+                            <ul class="country">
+                                <li>
+                                    <div class="ion-ios-arrow-down flag-arrow"></div>
+                                    <a class="country-style" href="#">UAE</a>
+                                    <ul>
+<li><a class="country-style" href="/qatar/en/personal/personal">QATAR</a></li><li><a class="country-style" href="/egypt/en/personal/personal">EGYPT</a></li><li><a class="country-style" href="/bahrain/en/personal/personal">BAHRAIN</a></li><li><a class="country-style" href="/kuwait/en/personal/personal">KUWAIT</a></li>                                    </ul>
+                                </li>
+                            </ul>
+                           <div id="language">
+                                <a class="lang" href="javascript:;" ng-click="redirectToArabic()">عربي</a>
+                            </div>
+                        </div>
+                        <div class="weather hidden-xs hidden-sm">
+                            <!--<span city-and-weather ng-show="weather"></span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <div class="col-md-6 col-sm-8 no-padding hidden-xs hidden-sm">
+            <div class="headerLinks">
+                <ul>
+   <li><a href="javascript:;" onclick="ga('send', { hitType: 'event', eventCategory: 'homepage',  eventAction: 'Click',  eventLabel: 'Online Banking'});" ng-click="onlineBanking = !onlineBanking; mobileBanking = false;" ng-class="{active : mobileBanking}" class="">
+                            <span><img src="mash_copy/img/online.png" style="height: 30px; width: 30px; margin-right: 10px; "><strong>Online<span>Banking</span></strong></span>
+                        </a></li>      <li><a href="javascript:;" onclick="ga('send', { hitType: 'event', eventCategory: 'homepage',  eventAction: 'Click',  eventLabel: 'Mobile Banking'});" ng-click="mobileBanking = !mobileBanking; onlineBanking = false;" ng-class="{active : mobileBanking}" class="active">
+                            <span><img src="mash_copy/img/mobile.png" style="height: 30px; width: 30px; margin-right: 10px;"><strong>Mobile<span>Banking</span></strong></span>
+                        </a></li>      <li><a href="javascript:;" onclick="ga('send', { hitType: 'event', eventCategory: 'homepage',  eventAction: 'Click',  eventLabel: 'atm Branch Locator});" id="atmBranchLocator" ng-click="toggleMap()">
+                            <span><img src="mash_copy/img/atm.png" style="height: 30px; width: 30px; margin-right: 10px;"><strong>ATM &amp; Branch<span>Locator</span></strong></span>
+                        </a></li>                   </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+<div id="container" style="position: relative;">
+<div id="slideshow" style="margin-left: 99px;">
+	<img src="mash_copy/img/1-slider.jpg">
+	<img src="mash_copy/img/2-slider.jpg">
+	<img src="mash_copy/img/3-slider.jpg">
+	<img src="mash_copy/img/4-slider.jpg">
+	<!--<img src="mash_copy/img/5-slider.jpg">
+	<img src="mash_copy/img/6-slider.jpg">
+	<img src="mash_copy/img/7-slider.jpg">
+	<img src="mash_copy/img/8-slider.jpg">
+	<img src="mash_copy/img/9-slider.jpg">
+	<img src="mash_copy/img/10-slider.jpg">
+	<img src="mash_copy/img/11-slider.jpg">
+	<img src="mash_copy/img/1-slider.jpg">-->
+<p id="text" class="hideme">
+    CAC banking <br><span style="font-size: 40px;">inspires you with</span> <br>Limitless possiblities
+  </p>
+  <!--<p id="text" class="hideme2">
+    The longer the relationship<br><span style="font-size: 40px;"></span> <br>the better the rewards
+  </p>-->
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer ng-scope" style="margin-left: 100px;">    
+<div class="contentPadding container-fluid container-fluid-width">
+      <div class="footerMenu" hide-in-mobile="visible-lg">
+             <div class="row">
+<!-- Footer List starts -->
+               <div class="col-md-3">
+                <div class="footerList">
+                         <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#" target="_blank">Work with us</a></li>
+                    <li><a href="#" target="_blank">Our Vision</a></li>
+                    <li><a href="#" target="_blank">Our Mission</a></li>
+                    <li><a href="#" target="_blank">Our Goal</a></li>
+                </ul>
+            </div>
+        </div>
+<!-- Footer list ends -->
+<!-- Footer Apps List starts -->
+               <div class="col-md-3">
+               <!-- <div class="footerListApps">
+                         <h4>Our Mobile Apps</h4>
+                <ul class="apps">
+                    <li><a class="snapp-target" href="/uae/en/personal/digital-banking/mobile-banking-snapp" target="_blank" title="Snapp Mobile Banking" alt="Snapp Mobile Banking"><img src="/uae/en/images/snapp-app-icon.png"></a></li>
+                </ul>
+            </div>-->
+<!-- Social list starts -->
+                    <div class="footerListSocial">
+                <h4>Join us on</h4>
+                <ul class="social">
+                    <li><a href="http://www.facebook.com/" target="_blank" title="FaceBook" alt="FaceBook">
+<i class="glyphicon-social ion-social-facebook"></i></a></li>
+                    <li><a href="http://www.twitter.com/" target="_blank" title="Twitter" alt="Twitter">
+<i class="glyphicon-social ion-social-twitter-outline"></i></a></li>
+                    <li><a href="http://www.youtube.com/" target="_blank" title="YouTube" alt="YouTube">
+<i class="glyphicon-social ion-social-youtube-outline"></i></a></li>
+                    <li><a href="https://plus.google.com/" target="_blank" title="Google+" alt="Google+">
+<i class="glyphicon-social ion-social-googleplus-outline"></i></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_blank" title="Linkedin" alt="Linkedin">
+<i class="glyphicon-social ion-social-linkedin-outline"></i></a></li>
+                </ul>
+          </div>
+</div>
+<!-- Social list ends -->
+<!-- Awards starts -->
+<div class="col-md-6">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d977.0972414799771!2d43.14744277230167!3d11.595593501625082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x162300c31038fe4b%3A0x1cf925f8d3344faf!2sCAC+International+Bank!5e0!3m2!1sen!2sin!4v1492159903377" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+</div>
+<!-- Awards Ends   socket -->
+ <div class="divider-space-with-line animate" data-divider-space-with-line="80px"></div>
+              <div class="">
+            <div class="row">
+                <div class="col-md-12">
+                                     <div class="col-md-4">
+                                          <span class="copyright">Copyright © 2017 CAC bank. All Rights Reserved.<span version=""></span>
+                                     </span></div>
+                                     <div class="col-md-8 copyright">
+                                             <a href="#">Disclaimer</a> | <a href="#">Privacy Policy</a>
+                                     </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+</div></footer>
+
+
+
+
+
+</body>
+
+
+
+<script type="text/javascript">
+	/**
+ * See: http://www.css-101.org/articles/ken-burns_effect/css-transition.php
+ */
+
+/**
+ * The idea is to cycle through the images to apply the "fx" class to them every n seconds. 
+ * We can't simply set and remove that class though, because that would make the previous image move back into its original position while the new one fades in. 
+ * We need to keep the class on two images at a time (the two that are involved with the transition).
+ */
+
+(function(){
+
+// we set the 'fx' class on the first image when the page loads
+  document.getElementById('slideshow').getElementsByTagName('img')[0].className = "fx";
+  
+// this calls the kenBurns function every 4 seconds
+// you can increase or decrease this value to get different effects
+  window.setInterval(kenBurns, 6000);		
+  
+// the third variable is to keep track of where we are in the loop
+// if it is set to 1 (instead of 0) it is because the first image is styled when the page loads
+  var images          = document.getElementById('slideshow').getElementsByTagName('img'),
+      numberOfImages  = images.length,
+      i               = 1;
+
+  function kenBurns() {
+  if(i==numberOfImages){ i = 0;}
+  images[i].className = "fx";
+
+// we can't remove the class from the previous element or we'd get a bouncing effect so we clean up the one before last
+// (there must be a smarter way to do this though)
+  if(i===0){ images[numberOfImages-2].className = "";}
+  if(i===1){ images[numberOfImages-1].className = "";}
+  if(i>1){ images[i-2].className = "";}
+  i++;
+
+  }
+})();
+
+</script>
+
+
+</html>
